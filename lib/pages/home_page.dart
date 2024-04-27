@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test_app/widgets/custom_card.dart';
 import 'package:test_app/widgets/custom_text_field.dart';
+import 'package:test_app/widgets/top.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -15,7 +16,7 @@ class HomePage extends StatelessWidget {
           SizedBox(
             height: 50,
           ),
-          Text('Add Products here ...'),
+          Top(),
           SizedBox(
             height: 20,
           ),

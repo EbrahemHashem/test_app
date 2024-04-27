@@ -14,10 +14,11 @@ class CartsService {
 
     for (var cart in carts) {
       CartModel cartModel = CartModel(
-          id: cart['id'],
-          image: cart["products"][0]['thumbnail'],
-          title: cart["products"][0]['title'],
-          price: cart["products"][0]['price']);
+        id: cart['id'],
+        image: cart["products"][0]['thumbnail'],
+        title: cart["products"][0]['title'],
+        price: cart["products"][0]['price'],
+      );
 
       cartsList.add(cartModel);
     }

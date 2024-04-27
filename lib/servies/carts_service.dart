@@ -5,12 +5,25 @@ class CartsService {
   final Dio dio;
 
   CartsService(this.dio);
+
+//   Future<List<CartModel>> getCarts() async {
+//     Response response = await dio.get('https://dummyjson.com/carts');
+//     Map<String, dynamic> jsonData = response.data;
+//     List cartsList = [];
+
+//     for (var cart in jsonData['carts']) {
+//       cartsList.add(cart["products"]);
+//     }
+//     return CartModel.cartFromSnapshot(cartsList);
+//   }
+// }
   getCarts() async {
     Response response = await dio.get('https://dummyjson.com/carts');
 
     Map<String, dynamic> jsonData = response.data;
     List<dynamic> carts = jsonData['carts'];
     List<CartModel> cartsList = [];
+
 
     for (var cart in carts) {
       CartModel cartModel = CartModel(

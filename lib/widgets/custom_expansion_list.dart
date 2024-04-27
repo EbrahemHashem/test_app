@@ -2,9 +2,13 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:test_app/models/cart_model.dart';
 import 'package:test_app/servies/carts_service.dart';
+import 'package:test_app/widgets/button.dart';
 
 class CustomExpansionList extends StatelessWidget {
-  const CustomExpansionList({super.key, required this.cartModel});
+  const CustomExpansionList({
+    super.key,
+    required this.cartModel,
+  });
   final CartModel cartModel;
 
   @override
@@ -35,22 +39,7 @@ class CustomExpansionList extends StatelessWidget {
                 ],
               ),
             ),
-            Container(
-              decoration: BoxDecoration(
-                  color: const Color.fromARGB(96, 124, 142, 0),
-                  borderRadius: BorderRadius.circular(12)),
-              height: 50,
-              width: 120,
-              child: Center(
-                child: GestureDetector(
-                  onTap: () {},
-                  child: const Text(
-                    'add',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                  ),
-                ),
-              ),
-            ),
+            const Button(),
           ],
         ),
       ],

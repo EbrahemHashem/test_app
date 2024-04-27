@@ -1,13 +1,13 @@
 class CartModel {
   final int id;
   final String? image;
-
   final String title;
-  final int? price;
-  CartModel( {
-    this.image,
+  final int price;
+  CartModel({
+    required this.image,
     required this.title,
-    this.price,
+    required this.price,
     required this.id,
   });
 }
+  ////////////////////
